@@ -38,7 +38,7 @@ Here is a screenshot of the error and logging output. The errors are displayed h
 Options
 =========
 
-If you want to suppress the stack trace at the end of the test run you can use the suppressErrorReport option.
+If you want to suppress the stack trace at the end of the test run you can use the suppressErrorReport option. If you want to suppress the browser console log at the end of the test run you can use the suppressBrowserLogs option.
 
 ```js
 // karma.conf.js
@@ -56,6 +56,9 @@ module.exports = function(config) {
       // suppress the red background on errors in the error
       // report at the end of the test run
       suppressErrorHighlighting: true, // default is false
+
+      // suppress the browser console log at the end of the test run
+      suppressBrowserLogs: true, // default is false
 
       // increase the number of rainbow lines displayed
       // enforced min = 4, enforced max = terminal height - 1
