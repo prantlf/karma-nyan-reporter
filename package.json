@@ -48,5 +48,8 @@
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
+  "release": {
+    "branch": "combined"
+  },
   "version": "0.0.0-development"
 }
