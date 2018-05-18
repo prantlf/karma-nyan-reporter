@@ -1,10 +1,10 @@
-[![npm version](https://badge.fury.io/js/karma-nyan-reporter-ext.svg)](http://badge.fury.io/js/karma-nyan-reporter-ext)
-[![Build Status](https://travis-ci.org/prantlf/karma-nyan-reporter-ext.svg)](https://travis-ci.org/prantlf/karma-nyan-reporter)
+[![npm version](https://badge.fury.io/js/karma-nyan-ext-reporter.svg)](http://badge.fury.io/js/karma-nyan-ext-reporter)
+[![Build Status](https://travis-ci.org/prantlf/karma-nyan-ext-reporter.svg)](https://travis-ci.org/prantlf/karma-nyan-reporter)
 [![Coverage Status](https://coveralls.io/repos/prantlf/karma-nyan-reporter/badge.svg?branch=master)](https://coveralls.io/r/prantlf/karma-nyan-reporter?branch=master)
 [![Code Climate](https://codeclimate.com/github/prantlf/karma-nyan-reporter/badges/gpa.svg)](https://codeclimate.com/github/prantlf/karma-nyan-reporter)
 <!-- [![Dependency Status](https://david-dm.org/prantlf/karma-nyan-reporter.svg)](https://david-dm.org/prantlf/karma-nyan-reporter) -->
 
-karma-nyan-reporter-ext
+karma-nyan-ext-reporter
 =======================
 
 Nyan Cat style reporter originally cobbled together from the [Mocha](http://visionmedia.github.io/mocha/) version
@@ -17,7 +17,7 @@ Installation
 Installation is simple using npm, just run the following command:
 
 ```sh
-npm install --save-dev karma-nyan-reporter-ext
+npm install --save-dev karma-nyan-ext-reporter
 ```
 
 Since this follows Karma's plugin naming convention, that's all there is to it!
