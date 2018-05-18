@@ -82,12 +82,12 @@ describe('printers.js test suite', function() {
             '\n,' +
             runtimeErrors[0].browser.name + ',' +
             '\n,' +
-            runtimeErrors[0].error + ',' +
+            JSON.stringify(runtimeErrors[0].error, undefined, 2) + ',' +
             '\n,' +
             '\n,' +
             runtimeErrors[1].browser.name + ',' +
             '\n,' +
-            runtimeErrors[1].error + ',' +
+            JSON.stringify(runtimeErrors[1].error, undefined, 2) + ',' +
             '\n,' +
             '\n,' +
             '#,\n,' +
@@ -139,9 +139,9 @@ describe('printers.js test suite', function() {
 
       eq(4, clcFake.red.callCount);
       ok(clcFake.red.getCall(0).calledWithExactly(runtimeErrors[0].browser.name));
-      ok(clcFake.red.getCall(1).calledWithExactly(runtimeErrors[0].error));
+      ok(clcFake.red.getCall(1).calledWithExactly(JSON.stringify(runtimeErrors[0].error, undefined, 2)));
       ok(clcFake.red.getCall(2).calledWithExactly(runtimeErrors[1].browser.name));
-      ok(clcFake.red.getCall(3).calledWithExactly(runtimeErrors[1].error));
+      ok(clcFake.red.getCall(3).calledWithExactly(JSON.stringify(runtimeErrors[1].error, undefined, 2)));
     });
   });
 
