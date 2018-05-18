@@ -6,7 +6,7 @@
   NyanCat.$inject = ['baseReporterDecorator', 'formatError', 'config'];
 
   module.exports = {
-    'reporter:nyan': ['type', NyanCat]
+    'reporter:nyan-ext': ['type', NyanCat]
   };
 
 })();
