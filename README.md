@@ -1,8 +1,7 @@
 [![npm version](https://badge.fury.io/js/karma-nyan-ext-reporter.svg)](http://badge.fury.io/js/karma-nyan-ext-reporter)
 [![Build Status](https://travis-ci.org/prantlf/karma-nyan-ext-reporter.svg)](https://travis-ci.org/prantlf/karma-nyan-reporter)
 [![Coverage Status](https://coveralls.io/repos/prantlf/karma-nyan-reporter/badge.svg?branch=master)](https://coveralls.io/r/prantlf/karma-nyan-reporter?branch=master)
-[![Code Climate](https://codeclimate.com/github/prantlf/karma-nyan-reporter/badges/gpa.svg)](https://codeclimate.com/github/prantlf/karma-nyan-reporter)
-<!-- [![Dependency Status](https://david-dm.org/prantlf/karma-nyan-reporter.svg)](https://david-dm.org/prantlf/karma-nyan-reporter) -->
+[![Dependency Status](https://david-dm.org/prantlf/karma-nyan-reporter.svg)](https://david-dm.org/prantlf/karma-nyan-reporter)
 
 karma-nyan-ext-reporter
 =======================
@@ -72,7 +71,3 @@ module.exports = function(config) {
   });
 };
 ```
-
-In this release
------------
- - Fix for [issue #23](https://github.com/dgarlitt/karma-nyan-reporter/issues/23) - Total tests count is different from other reporters
