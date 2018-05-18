@@ -20,7 +20,9 @@ describe('data/types.js test suite', function() {
     right = 'right>';
 
     clcFake = {
-      'right': sinon.stub(),
+      'move': {
+        'right': sinon.stub()
+      },
       'white': sinon.stub(),
       'red': sinon.stub(),
       'yellow': sinon.stub(),
@@ -31,7 +33,7 @@ describe('data/types.js test suite', function() {
       }
     };
 
-    clcFake.right.returns(right);
+    clcFake.move.right.returns(right);
 
     dt = rewire('../lib/data/types');
     dt.__set__('clc', clcFake);
@@ -107,8 +109,8 @@ describe('data/types.js test suite', function() {
       actual = sut.toString();
 
       eq(expected, actual);
-      ok(clcFake.right.calledOnce);
-      ok(clcFake.right.calledWithExactly(sut.depth * tab + 1));
+      ok(clcFake.move.right.calledOnce);
+      ok(clcFake.move.right.calledWithExactly(sut.depth * tab + 1));
       ok(clcFake.white.calledOnce);
       ok(clcFake.white.calledWithExactly(name));
     });
@@ -154,8 +156,8 @@ describe('data/types.js test suite', function() {
       actual = sut.toString();
 
       eq(expected, actual);
-      ok(clcFake.right.calledOnce);
-      ok(clcFake.right.calledWithExactly(depth * tab + 1));
+      ok(clcFake.move.right.calledOnce);
+      ok(clcFake.move.right.calledWithExactly(depth * tab + 1));
       ok(clcFake.red.calledOnce);
       ok(clcFake.red.calledWithExactly(name));
     });
@@ -189,11 +191,11 @@ describe('data/types.js test suite', function() {
     it('should call clc.right as expected when toString is called', function() {
       sut.toString();
 
-      eq(4, clcFake.right.callCount);
-      ok(clcFake.right.getCall(0).calledWithExactly(depth * tab + 1));
-      ok(clcFake.right.getCall(1).calledWithExactly((depth + 1) * tab + 1));
-      ok(clcFake.right.getCall(2).calledWithExactly((depth + 2) * tab + 1));
-      ok(clcFake.right.getCall(3).calledWithExactly((depth + 2) * tab + 1));
+      eq(4, clcFake.move.right.callCount);
+      ok(clcFake.move.right.getCall(0).calledWithExactly(depth * tab + 1));
+      ok(clcFake.move.right.getCall(1).calledWithExactly((depth + 1) * tab + 1));
+      ok(clcFake.move.right.getCall(2).calledWithExactly((depth + 2) * tab + 1));
+      ok(clcFake.move.right.getCall(3).calledWithExactly((depth + 2) * tab + 1));
     });
 
     it('should call the color methods on clc as expected when toString is called', function() {
