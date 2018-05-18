@@ -31,7 +31,7 @@
             "name": "Daniel Arlitt"
         }
     ],
-    "name": "karma-nyan-reporter",
+    "name": "karma-nyan-reporter-ext",
     "peerDependencies": {
         "karma": ">=0.9"
     },
@@ -44,5 +44,5 @@
         "test": "./node_modules/mocha/bin/mocha -R spec ./test/*",
         "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec  ./test/*"
     },
-    "version": "0.2.5"
+    "version": "0.3.0"
 }
