@@ -44,9 +44,9 @@
   },
   "scripts": {
     "prepare": "nsp check",
-    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha",
     "test": "mocha -R spec ./test/*",
-    "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec ./test/*",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec ./test/*",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
