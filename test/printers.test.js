@@ -66,7 +66,16 @@ describe('printers.js test suite', function() {
         'browser': {
           'name': 'browser2'
         },
-        'error': 'error2'
+        'error': {
+          'message': 'error2'
+        }
+      },{
+        'browser': {
+          'name': 'browser3'
+        },
+        'error': {
+          'code': 'error3'
+        }
       }];
 
       out = '#,#,#,#,#,#,#,#,#,#,\n,' +
@@ -82,12 +91,17 @@ describe('printers.js test suite', function() {
             '\n,' +
             runtimeErrors[0].browser.name + ',' +
             '\n,' +
-            JSON.stringify(runtimeErrors[0].error, undefined, 2) + ',' +
+            runtimeErrors[0].error + ',' +
             '\n,' +
             '\n,' +
             runtimeErrors[1].browser.name + ',' +
             '\n,' +
-            JSON.stringify(runtimeErrors[1].error, undefined, 2) + ',' +
+            runtimeErrors[1].error.message + ',' +
+            '\n,' +
+            '\n,' +
+            runtimeErrors[2].browser.name + ',' +
+            '\n,' +
+            JSON.stringify(runtimeErrors[2].error, undefined, 2) + ',' +
             '\n,' +
             '\n,' +
             '#,\n,' +
@@ -137,11 +151,13 @@ describe('printers.js test suite', function() {
       eq(hashCount, rainbowifyFake.callCount);
       eq(total, writeFake.callCount);
 
-      eq(4, clcFake.red.callCount);
+      eq(6, clcFake.red.callCount);
       ok(clcFake.red.getCall(0).calledWithExactly(runtimeErrors[0].browser.name));
-      ok(clcFake.red.getCall(1).calledWithExactly(JSON.stringify(runtimeErrors[0].error, undefined, 2)));
+      ok(clcFake.red.getCall(1).calledWithExactly(runtimeErrors[0].error));
       ok(clcFake.red.getCall(2).calledWithExactly(runtimeErrors[1].browser.name));
-      ok(clcFake.red.getCall(3).calledWithExactly(JSON.stringify(runtimeErrors[1].error, undefined, 2)));
+      ok(clcFake.red.getCall(3).calledWithExactly(runtimeErrors[1].error.message));
+      ok(clcFake.red.getCall(4).calledWithExactly(runtimeErrors[2].browser.name));
+      ok(clcFake.red.getCall(5).calledWithExactly(JSON.stringify(runtimeErrors[2].error, undefined, 2)));
     });
   });
 
