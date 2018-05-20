@@ -141,16 +141,14 @@ describe('nyanCat.js test suite', function() {
       sut = new module.NyanCat(null, formatterFake, configFake);
 
       expect(sut).to.contain.keys(defaultPropertyKeys);
-      expect(sut.options).to.not.be.an.object;
+      expect(sut.options).to.be.an('object');
       expect(sut.options.suppressErrorReport).to.be.false;
       expect(sut.options.suppressErrorHighlighting).to.be.false;
       expect(sut.options.numberOfRainbowLines).to.eq(4);
       expect(sut.options.renderOnRunCompleteOnly).to.be.false;
-      expect(sut.adapterMessages).to.be.an.array;
-      expect(sut.adapterMessages).to.be.empty;
-      expect(sut.adapters).to.be.an.array;
+      expect(sut.adapters).to.be.an('array');
       expect(sut.adapters).to.have.length(1);
-      expect(sut.adapters[0]).to.be.a.function;
+      expect(sut.adapters[0]).to.be.a('function');
       expect(dataTypesFake.setErrorFormatterMethod.calledOnce).to.be.true;
       expect(dataTypesFake.setErrorFormatterMethod.calledWithExactly(formatterFake)).to.be.true;
 
@@ -325,9 +323,9 @@ describe('nyanCat.js test suite', function() {
     it('should add an entry to the browser_logs property', function() {
       sut.onBrowserLog(browser1, log1, null);
 
-      expect(sut.browser_logs[browser1.id]).to.be.an.object;
+      expect(sut.browser_logs[browser1.id]).to.be.an('object');
       expect(sut.browser_logs[browser1.id].name).to.eq(browser1.name);
-      expect(sut.browser_logs[browser1.log_messages]).to.be.an.array;
+      expect(sut.browser_logs[browser1.id].log_messages).to.be.an('array');
       expect(sut.browser_logs[browser1.id].log_messages.length).to.eq(1);
       expect(sut.browser_logs[browser1.id].log_messages[0]).to.eq(log1);
     });
