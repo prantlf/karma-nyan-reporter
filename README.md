@@ -1,6 +1,5 @@
 [![npm version](https://badge.fury.io/js/karma-nyan-ext-reporter.svg)](http://badge.fury.io/js/karma-nyan-ext-reporter)
-[![Build Status](https://travis-ci.org/prantlf/karma-nyan-ext-reporter.svg)](https://travis-ci.org/prantlf/karma-nyan-reporter)
-[![Coverage Status](https://coveralls.io/repos/prantlf/karma-nyan-reporter/badge.svg?branch=master)](https://coveralls.io/r/prantlf/karma-nyan-reporter?branch=master)
+[![Build Status](https://travis-ci.org/prantlf/karma-nyan-reporter.svg)](https://travis-ci.org/prantlf/karma-nyan-reporter)
 [![Dependency Status](https://david-dm.org/prantlf/karma-nyan-reporter.svg)](https://david-dm.org/prantlf/karma-nyan-reporter)
 
 karma-nyan-ext-reporter
